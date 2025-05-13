@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>MdiChatApp</h2>
+                <div class="header-icons">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search or start a new chat">
+                </div>
+            </div>
+            
+            <div class="chat-list">
+                <!-- Chat 1 -->
+                <div class="chat-item" data-chat-id="1">
+                    <div class="profile-pic">
+                        <img src="./images/IMG-20240111-WA0032.jpg" alt="Profile">
+                    </div>
+                    <div class="chat-details">
+                        <div class="chat-header">
+                            <h3>CODING CLASS</h3>
+                            <span class="timestamp">12:52 AM</span>
+                        </div>
+                        <div class="last-message">
+                            <span>~ML: Let's discuss the project</span>
+                            <div class="notification">5</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chat 2 -->
+                <div class="chat-item" data-chat-id="2">
+                    <div class="profile-pic">
+                        <img src="./images/IMG-20240212-WA0013.jpg" alt="Profile">
+                    </div>
+                    <div class="chat-details">
+                        <div class="chat-header">
+                            <h3>Web Development</h3>
+                            <span class="timestamp">Yesterday</span>
+                        </div>
+                        <div class="last-message">
+                            <span>Great work on the frontend!</span>
+                            <div class="notification">3</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chat 3 -->
+                <div class="chat-item" data-chat-id="3">
+                    <div class="profile-pic">
+                        <img src="./images/IMG-20240214-WA0024.jpg" alt="Profile">
+                    </div>
+                    <div class="chat-details">
+                        <div class="chat-header">
+                            <h3>Ancha Gaye</h3>
+                            <span class="timestamp">9:16 PM</span>
+                        </div>
+                        <div class="last-message">
+                            <span>Ok</span>
+                            <div class="notification">10</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chat 4 -->
+                <div class="chat-item" data-chat-id="4">
+                    <div class="profile-pic">
+                        <img src="./images/IMG-20240228-WA0005.jpg" alt="Profile">
+                    </div>
+                    <div class="chat-details">
+                        <div class="chat-header">
+                            <h3>Computer Science</h3>
+                            <span class="timestamp">7:30 PM</span>
+                        </div>
+                        <div class="last-message">
+                            <span>Meeting tomorrow at 9</span>
+                            <div class="notification">7</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chat 5 -->
+                <div class="chat-item" data-chat-id="5">
+                    <div class="profile-pic">
+                        <img src="./images/IMG-20240228-WA0008.jpg" alt="Profile">
+                    </div>
+                    <div class="chat-details">
+                        <div class="chat-header">
+                            <h3>Math Group</h3>
+                            <span class="timestamp">5:49 PM</span>
+                        </div>
+                        <div class="last-message">
+                            <span>Don't forget the assignment!</span>
+                            <div class="notification">2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main content area -->
+        <div class="main-content">
+            <!-- Welcome screen (shown by default) -->
+            <div class="welcome-screen">
+                <div class="logo">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h1>MdiChatApp for MDI Students</h1>
+                <p>Send and receive messages without keeping your phone online.</p>
+                <p>Use MdiChatApp on up to 4 linked devices and 1 phone at the same time and chat with your MDI friends Offline!!.</p>
+                <div class="encryption-note">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>End-to-end encrypted By MDI</span>
+                </div>
+            </div>
+            
+            <!-- Chat content (hidden initially) -->
+            <div class="chat-content" style="display: none;">
+                <div class="chat-header">
+                    <div class="chat-user-info">
+                        <div class="profile-pic">
+                            <img id="current-chat-img" src="" alt="Profile">
+                        </div>
+                        <div class="user-details">
+                            <h3 id="current-chat-name"></h3>
+                            <span>last seen recently</span>
+                        </div>
+                    </div>
+                    <div class="chat-actions">
+                        <i class="fa-solid fa-search"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+                
+                <div class="message-container" id="message-container">
+                    <!-- Messages will be added dynamically -->
+                </div>
+                
+                <div class="message-input">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <input type="text" placeholder="Type a message">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
